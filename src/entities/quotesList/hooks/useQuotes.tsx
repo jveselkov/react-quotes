@@ -1,11 +1,12 @@
-import { mapQuotesFromResponse, Quotes } from "@/entities/quotesList";
-
 import { useEffect, useState } from "react";
 
+import { mapQuotesFromResponse, Quotes } from "@/entities/quotesList";
+
+import { INITIAL_API_URL } from "@/shared";
+
 export const useQuotes = () => {
-  const [url, updateUrl] = useState(
-    "https://www.cbr-xml-daily.ru/daily_json.js"
-  );
+  const [url, updateUrl] = useState(INITIAL_API_URL);
+
   const [isLoading, setLoading] = useState(false);
   const [quotes, setQuotes] = useState<Quotes | null>(null);
   const [error, setError] = useState<string | null>(null);
