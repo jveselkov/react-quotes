@@ -1,0 +1,10 @@
+.quoteCard {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1em;
+  border: 1px solid gray;
+  border-radius: 0.5em;
+
+
+}
